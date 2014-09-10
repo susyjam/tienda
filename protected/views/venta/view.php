@@ -25,6 +25,22 @@ $this->menu=array(
 		'fecha_venta',
 		'hora_venta',
 		'id_cliente',
+		array(
+                        'name'=>'id_cliente',
+                        
+                        'type'=>'raw',//mostar datos html date o datetime
+                        'value'=>'$data->id_cliente',
+                        //'value'=>'strtoupper($data->nombre." ".$data->apellido)',
+                        'filter'=>CHtml::listData(Cliente::model()->findAll(),'id_cliente','nombre_cliente'),
+                        ),
 		'id_empleado',
+		array(
+                        'name'=>'id_empleado',
+                        
+                        'type'=>'raw',//mostar datos html date o datetime
+                        'value'=>'$data->id_empleado',
+                        //'value'=>'strtoupper($data->nombre." ".$data->apellido)',
+                        'filter'=>CHtml::listData(Empleado::model()->findAll(),'id_empleado','nombre_empleado'),
+                        ),
 	),
 )); ?>

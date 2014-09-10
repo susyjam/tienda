@@ -49,7 +49,24 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'fecha_venta',
 		'hora_venta',
 		'id_cliente',
+		array(
+                        'name'=>'id_cliente',
+                        
+                        'type'=>'raw',//mostar datos html date o datetime
+                        'value'=>'$data->id_cliente',
+                        //'value'=>'strtoupper($data->nombre." ".$data->apellido)',
+                        'filter'=>CHtml::listData(Cliente::model()->findAll(),'id_cliente','nombre_cliente'),
+                        ),
 		'id_empleado',
+		array(
+                        'name'=>'id_empleado',
+                        
+                        'type'=>'raw',//mostar datos html date o datetime
+                        'value'=>'$data->id_empleado',
+                        //'value'=>'strtoupper($data->id_empleado." ".$data->nombre_empleado)',
+                        'filter'=>CHtml::listData(Empleado::model()->findAll(),'id_empleado','nombre_empleado'),
+                       // 'value'=>'strtoupper($data->id_empleado." ".$data->nombre_empleado)',
+                        ),
 		array(
 			'class'=>'CButtonColumn',
 		),

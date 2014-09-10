@@ -30,11 +30,13 @@
 		<?php echo $form->label($model,'id_cliente'); ?>
 		<?php echo $form->textField($model,'id_cliente'); ?>
 	</div>
+	
 
 	<div class="row">
 		<?php echo $form->label($model,'id_empleado'); ?>
 		<?php echo $form->textField($model,'id_empleado'); ?>
 	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>

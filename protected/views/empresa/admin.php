@@ -45,22 +45,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id_empresa',
-		'nombre_empresa',
-		'descripcion_empresa',
+
 		array(
-			'name'=>'id_empresa',
-			'header'=>'dulce',
-			'value'=>'$data->nombre_empresa',
-			),
-		 array(
                         'name'=>'id_empresa',
-                        'header'=>'prueba ',
                         'type'=>'raw',//mostar datos html date o datetime
                         'value'=>'$data->id_empresa',
                         //'value'=>'strtoupper($data->nombre." ".$data->apellido)',
                         'filter'=>CHtml::listData(Empresa::model()->findAll(),'id_empresa','nombre_empresa','descripcion_empresa'),
                         ),
+		'nombre_empresa',
+		'descripcion_empresa',
+		/*array(
+			'name'=>'id_empresa',
+			'value'=>'$data->nombre_empresa',
+			),*/
+		 /*array(
+                        'name'=>'id_empresa',
+                        'type'=>'raw',//mostar datos html date o datetime
+                        'value'=>'$data->id_empresa',
+                        //'value'=>'strtoupper($data->nombre." ".$data->apellido)',
+                        'filter'=>CHtml::listData(Empresa::model()->findAll(),'id_empresa','nombre_empresa','descripcion_empresa'),
+                        ),*/
 		array(
 			'class'=>'CButtonColumn',
 		),

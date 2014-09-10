@@ -20,6 +20,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_cliente')); ?>:</b>
 	<?php echo CHtml::encode($data->id_cliente); ?>
 	<br />
+	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id_empleado')); ?>:</b>
 	<?php echo CHtml::encode($data->id_empleado); ?>

@@ -51,7 +51,11 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hora_venta'); ?>
-		<?php echo $form->textField($model,'hora_venta'); ?>
+		<?php //echo $form->textField($model,'hora_venta'); ?>
+		<?php //echo $form->textField($model,'reg_date', array('value'=>date('H:i:s'))); ?>
+		 <?php date_default_timezone_set('America/Caracas');
+             $fecha = Date('Y-m-d h:i:s'); ?>
+       <?php echo $form->textField($model,'hora_venta', array('value'=>$fecha, 'readonly'=>'false')); ?>
 		<?php echo $form->error($model,'hora_venta'); ?>
 	</div>
 

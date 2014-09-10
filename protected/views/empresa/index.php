@@ -18,21 +18,23 @@ $this->menu=array(
 
 
 <?php 
-$this->widget('zii.widgets.CListView', array(
+/*$this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
-)); 
-/*$gridColumns = array(
+));*/ 
+
+
+$gridColumns = array(
 array('name'=>'id_empresa', 'header'=>'#', 'htmlOptions'=>array('style'=>'width: 60px')),
 array('name'=>'nombre_empresa', 'header'=>'Nombre'),
 array('name'=>'descripcion_empresa', 'header'=>'Descripcion'),
-array(
+/*array(
 'htmlOptions' => array('nowrap'=>'nowrap'),
 'class'=>'bootstrap.widgets.TbButtonColumn',
 'viewButtonUrl'=>null,
 'updateButtonUrl'=>null,
 'deleteButtonUrl'=>null,
-)
+)*/
 );
        $this->widget(
     'bootstrap.widgets.TbGridView',
@@ -41,5 +43,5 @@ array(
     'template' => "{items}",
     'columns' => $gridColumns,
     )
-    );*/
+    );
 ?>
